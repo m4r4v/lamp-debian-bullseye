@@ -237,15 +237,17 @@ MariaDB can communicate in two ways:
 
 ### step 1: my.cnf
 
+backup the file
+
 ```bash
-# backup the file
 cp /etc/mysql/my.cnf /etc/mysql/my.cnf.backup
 ```
 
 socket communication because it shares host with other services allowing socket communication 
 
+open in editor
+
 ```bash
-# open in editor
 vim /etc/mysql/my.cnf
 ```
 
@@ -254,7 +256,7 @@ uncomment the following line `socket = /run/mysqld/mysqld.sock`
 Now, restart mysql
 
 ```bash
-/etc/init.d/mysql restart
+/etc/init.d/mariadb restart
 ```
 
 ### step 2: execute mysql_secure_installation
